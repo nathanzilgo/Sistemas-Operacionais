@@ -32,7 +32,7 @@ public class MonitorImpl extends Dinner {
     public void takeTalher(int id) {
 
         this.philosopherStates.set(id, PhilosopherStates.HUNGRY);
-        System.out.println(this.philosopherStates);
+        System.out.println("Estados atuais: " + this.philosopherStates);
 
         synchronized(this.philosophers.get(id)) {
 
@@ -58,7 +58,7 @@ public class MonitorImpl extends Dinner {
     public void lendTalher(int id) {
 
         this.philosopherStates.set(id, PhilosopherStates.THINKING);
-        System.out.println(this.philosopherStates);
+        System.out.println("Estados atuais:" + this.philosopherStates);
 
         if (this.philosopherStates.get(left(id)) == PhilosopherStates.HUNGRY
                 && possibleEat(left(id))) {

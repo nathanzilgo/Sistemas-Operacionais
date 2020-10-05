@@ -41,7 +41,7 @@ public class SemaphoreImpl extends Dinner {
     {
         try{
             mutex.acquire();
-            System.out.println(philosopherStates);
+            System.out.println("Estados atuais: " + philosopherStates);
 
         } catch (InterruptedException e) {
 
@@ -75,7 +75,7 @@ public class SemaphoreImpl extends Dinner {
     {
         try{
             mutex.acquire();
-            System.out.println(this.philosopherStates);
+            System.out.println("Estados atuais: " + this.philosopherStates);
 
         } catch (InterruptedException e){
 
@@ -85,7 +85,7 @@ public class SemaphoreImpl extends Dinner {
         this.philosopherStates.set(id, PhilosopherStates.HUNGRY);
 
         if (philosopherStates.get(right(id)) == PhilosopherStates.HUNGRY && possibleEat(right(id))) {
-            philosopherStates.set(right(id), PhilosopherStates.EATING);
+            this.philosopherStates.set(right(id), PhilosopherStates.EATING);
             this.philosophers.get(right(id)).release();
         }
 
