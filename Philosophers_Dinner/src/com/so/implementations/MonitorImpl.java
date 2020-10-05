@@ -24,7 +24,7 @@ public class MonitorImpl extends Dinner {
         for(int i = 0; i < this.howManyPhilosophers; i++){
 
             this.philosopherStates.add(PhilosopherStates.THINKING);
-            this.philosophers.set(i, new Semaphore(0));
+            this.philosophers.add(new Semaphore(0));
         }
     }
 
