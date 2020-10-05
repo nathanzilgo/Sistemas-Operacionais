@@ -1,5 +1,6 @@
 package com.so.implementations;
 
+import com.so.enums.PhilosopherStates;
 import com.so.models.Dinner;
 
 import java.util.ArrayList;
@@ -16,12 +17,18 @@ public class SemaphoreImpl extends Dinner {
 
         this.mutex = new Semaphore(initialValue);
         this.philosophers = new ArrayList<Semaphore>(this.howManyPhilosophers);
+
+        fillPhilosophers();
     }
 
     private void fillPhilosophers(){
 
         for(int i = 0; i < this.howManyPhilosophers; i++){
 
+            this.philosopherStates.add(PhilosopherStates.THINKING);
+            this.philosophers.set(i, new Semaphore(0));
         }
     }
+
+
 }
