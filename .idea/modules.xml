@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Sistemas-Operacionais.iml" filepath="$PROJECT_DIR$/Sistemas-Operacionais.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Philosophers_Dinner/Sistemas-Operacionais.iml" filepath="$PROJECT_DIR$/Philosophers_Dinner/Sistemas-Operacionais.iml" />
     </modules>
   </component>
 </project>
